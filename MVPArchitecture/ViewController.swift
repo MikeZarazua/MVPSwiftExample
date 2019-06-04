@@ -8,13 +8,43 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    @IBOutlet weak var descriptionLabel: UILabel!
 
+    private let trafficLightPresenter = TrafficLightPresenter(trafficLigthService: ServiceTrafficLight())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        trafficLightPresenter.setViewDelegate(trafficLightViewDelegate: self)
     }
-
-
 }
 
+//MARK : - IBActions
+extension ViewController
+{
+    @IBAction func actionGreenLight(_ sender: Any)
+    {
+        trafficLightPresenter.trafficLightcolorSelected(colorName: "Green")
+    }
+    
+    @IBAction func actionYellowLight(_ sender: Any) {
+        trafficLightPresenter.trafficLightcolorSelected(colorName: "Yellow")
+    }
+    
+    @IBAction func actionredLight(_ sender: Any) {
+        trafficLightPresenter.trafficLightcolorSelected(colorName: "Red")
+    }
+}
+
+
+//MARK : - TrafficViewDelegate Methods
+extension ViewController:TrafficLightViewDelegate
+{
+    func displayTrafficLight(description: String, from: TrafficLightPresenter)
+    {
+        print("description \(description)")
+        self.descriptionLabel.text = description
+    }
+}

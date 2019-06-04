@@ -14,6 +14,9 @@
 		2706156422A4709800EE42A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2706156222A4709800EE42A9 /* LaunchScreen.storyboard */; };
 		2706156F22A4709800EE42A9 /* MVPArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706156E22A4709800EE42A9 /* MVPArchitectureTests.swift */; };
 		2706157A22A4709800EE42A9 /* MVPArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706157922A4709800EE42A9 /* MVPArchitectureUITests.swift */; };
+		2706158922A4710400EE42A9 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706158822A4710400EE42A9 /* TrafficLight.swift */; };
+		2706158C22A474CF00EE42A9 /* ServiceTrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706158B22A474CF00EE42A9 /* ServiceTrafficLight.swift */; };
+		2706158F22A4782000EE42A9 /* TrafficLightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2706158E22A4782000EE42A9 /* TrafficLightPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		2706157522A4709800EE42A9 /* MVPArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2706157922A4709800EE42A9 /* MVPArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPArchitectureUITests.swift; sourceTree = "<group>"; };
 		2706157B22A4709800EE42A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2706158822A4710400EE42A9 /* TrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
+		2706158B22A474CF00EE42A9 /* ServiceTrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTrafficLight.swift; sourceTree = "<group>"; };
+		2706158E22A4782000EE42A9 /* TrafficLightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 		2706155822A4709100EE42A9 /* MVPArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				2706158D22A4780C00EE42A9 /* Presenter */,
+				2706158A22A4745F00EE42A9 /* DataProvider */,
+				2706158722A470EA00EE42A9 /* Model */,
 				2706155922A4709100EE42A9 /* AppDelegate.swift */,
 				2706155B22A4709100EE42A9 /* ViewController.swift */,
 				2706155D22A4709100EE42A9 /* Main.storyboard */,
@@ -123,6 +132,30 @@
 				2706157B22A4709800EE42A9 /* Info.plist */,
 			);
 			path = MVPArchitectureUITests;
+			sourceTree = "<group>";
+		};
+		2706158722A470EA00EE42A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2706158822A4710400EE42A9 /* TrafficLight.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2706158A22A4745F00EE42A9 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2706158B22A474CF00EE42A9 /* ServiceTrafficLight.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		2706158D22A4780C00EE42A9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2706158E22A4782000EE42A9 /* TrafficLightPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +291,9 @@
 			files = (
 				2706155C22A4709100EE42A9 /* ViewController.swift in Sources */,
 				2706155A22A4709100EE42A9 /* AppDelegate.swift in Sources */,
+				2706158922A4710400EE42A9 /* TrafficLight.swift in Sources */,
+				2706158C22A474CF00EE42A9 /* ServiceTrafficLight.swift in Sources */,
+				2706158F22A4782000EE42A9 /* TrafficLightPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JB7D7V9V4W;
+				DEVELOPMENT_TEAM = 6JM9S43F86;
 				INFOPLIST_FILE = MVPArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JB7D7V9V4W;
+				DEVELOPMENT_TEAM = 6JM9S43F86;
 				INFOPLIST_FILE = MVPArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
